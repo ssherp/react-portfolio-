@@ -1,4 +1,6 @@
 function Project({ name, description, img}) {
+
+    const name=
     return (
 <div>
     <h1>Project</h1>

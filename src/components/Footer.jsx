@@ -1,16 +1,14 @@
-function Footer() {
+export default function Footer() {
     return (
-        <div>
-            <a>
-                <h5>Linkedin</h5>
-            </a>
-            <a>
-                <h5>Medium</h5>
-            </a>
-            <a>
-                <h5>Github</h5>
-            </a>
-        </div>
-    );
+        <footer className="my-4">
+            <ul className="nav justify-content-center">
+                <li className="nav-item">
+                    <a className="nav-link custom-link-footer" target="_blank" rel="noopener noreferrer" href="https://github.com/ssherp">Github</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link custom-link-footer" target="_blank" rel="noopener noreferrer"  href="https://www.linkedin.com/in/sonam-sherpa-306559280/">Linkedin</a>
+                </li>
+            </ul>
+        </footer>
+    )
 }
-export default Footer;

@@ -1,37 +1,19 @@
-import { Outlet } from 'react-router-dom';
-import Navbar from "./components/Navbar"
+import { Outlet } from 'react-router-dom'
+import Header from './components/Header'
 import Footer from './components/Footer'
-import Home from "./pages/Home"
-import { BrowserRouter as Router, Route, Switch,Redirect } from 'react-router-dom';
-import Contact from './pages/Contact';
+
 function App() {
-
-  return (
-    <Router>
-      <Switch>
-        <Route path='/'>
-          <Home/>          
-        </Route>
-        <Route path='/contact'>
-          <Contact/>          
-        </Route>
-        <Route>
-          <Redirect to path="/"/>          
-        </Route>
-      </Switch>
-    </Router>
-
+  return(
+    <>
+      <Header/>
+      <main className='main-background'>
+        <Outlet/>
+      </main>
+      <footer>
+        <Footer/>
+      </footer>
+    </>
   )
 }
 
-export default App;
-
-
-
-
-
-{/* <div>
-        <Navbar />
-        <Outlet />
-        <Footer />
-      </div> */}
+export default App
